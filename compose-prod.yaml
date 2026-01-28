@@ -1,0 +1,14 @@
+services:
+  frontend-prod:
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    container_name: frontend-prod
+    restart: always
+    ports:
+      - 80:80
+    networks:
+     - network
+     
+networks:
+  network:
